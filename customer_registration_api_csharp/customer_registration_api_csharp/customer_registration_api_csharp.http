@@ -1,0 +1,6 @@
+@customer_registration_api_csharp_HostAddress = http://localhost:5003
+
+GET {{customer_registration_api_csharp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
