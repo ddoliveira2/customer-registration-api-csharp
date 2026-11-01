@@ -1,4 +1,13 @@
+using customer_registration_api_csharp.Dal.Dao;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<SqlServerContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
 
 // Add services to the container.
 
